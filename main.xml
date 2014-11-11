@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.jassoftware.textmeeting.MainActivity" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings" android:visible="false" android:enabled="false"/>
+    <item android:id="@+id/start" android:title="@string/men_start"></item>
+    <item android:id="@+id/org" android:title="@string/men_org"></item>
+	<item android:id="@+id/dt" android:title="@string/men_dt"></item>
+	<item android:id="@+id/att" android:title="@string/men_att"></item>
+	<item android:id="@+id/rec" android:title="@string/men_rec"></item>
+	<item android:id="@+id/rev" android:title="@string/men_rev"></item>
+	<item android:id="@+id/attL" android:title="@string/men_attL"></item>  
+	<item android:id="@+id/send" android:title="@string/men_send"></item>  
+
+</menu>
