@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="@string/dt_label"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dt_start_label"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <CalendarView
+        android:id="@+id/dt_start_date"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:showWeekNumber="false"
+        android:dateTextAppearance="?android:attr/textAppearanceLarge"
+        android:weekDayTextAppearance="?android:attr/textAppearanceMedium" />
+
+    <TimePicker
+        android:id="@+id/dt_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+	<RadioGroup
+	    android:id="@+id/dt_rg"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+    
+    	<RadioButton
+        	android:id="@+id/dt_rb_end"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/dt_rb_ends" />
+
+	    <TextView
+    	    android:id="@+id/textView3"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/dt_end_label"
+        	android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    	<TimePicker
+        	android:id="@+id/dt_end_time"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content" />
+	
+    	<TextView
+        	android:id="@+id/el_curr_list"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/dt_or"
+        	android:layout_gravity="center"
+        	android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    	<RadioButton
+        	android:id="@+id/dt_rb_last"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/dt_rb_lasts" />
+	
+    	<TextView
+        	android:id="@+id/textView5"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/dt_last_label"
+        	android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+    	<LinearLayout
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content"
+    	    android:orientation="horizontal" >
+    	    
+    	    <NumberPicker
+    	    	android:id="@+id/dt_lasts"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content" />
+    	    
+    	    <TextView
+    	      	android:id="@+id/el_paste_box"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="@string/dt_last_label2"
+        		android:layout_gravity="center"
+        		android:textAppearance="?android:attr/textAppearanceMedium" />  
+    	
+    	</LinearLayout>
+	</RadioGroup>
+	
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+    	<Button 
+        	android:id="@+id/dt_set_button"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="@dimen/activity_vertical_margin"
+        	android:text="@string/dt_set" />
+    
+    	<Button
+        	android:id="@+id/dt_next"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        	android:layout_marginTop="@dimen/activity_vertical_margin"
+        	android:layout_marginBottom="@dimen/activity_vertical_margin"
+        	android:text="@string/dt_next" />
+	
+	</LinearLayout>
+	
+</LinearLayout>
