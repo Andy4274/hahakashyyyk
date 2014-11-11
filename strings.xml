@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TextMeeting</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="button_Set">Set</string>
+	<string name="button_Next">Next</string>
+	
+	<!-- menu strings -->
+	<string name="men_start">Start Screen</string>
+	<string name="men_org">Organizer and Location</string>
+	<string name="men_att">Attendees</string>
+	<string name="men_dt">Dates and Times</string>
+	<string name="men_rec">Recurence</string>
+	<string name="men_rev">Review Meeting</string>
+	<string name="men_attL">Edit Attendee Lists</string>
+	<string name="men_send">Send Activity</string>
+		
+	<!-- start strings -->
+	<string name="start_label">What do you want to do?</string>
+	<string name="start_new_button">Create a new meeting</string>
+	<string name="start_edit_button">Edit Attendee Lists</string>
+	<string name="start_new_label">This will start the process to call a new meeting.</string>
+	<string name="start_edit_label">This will let you create and edit lists so you can quickly add groups of attendees</string>
+	<string name="start_quit">Done</string>
+	
+    <!-- organizer strings -->
+    <string name="org_label">Create a new meeting.\n</string>
+    <string name="org_label2">First, who are you and where do you want to meet?\n</string>
+    <string name="name_label">Organizer\'s (Your) Name:</string>
+    <string name="number_label">Organizer\'s (Your) Number:</string>
+    <string name="loc_label">Location of the meeting:</string>
+    <string name="loc_hint">Room number, and maybe building, if necessary</string>
+    <string name="button_hint">Saving will keep your name, number, and the location for the next time you use this app.\nSetting saves the same data for this use.\nNext takes you to Dates and Times.</string>
+    <string name="save">Save</string>
+    
+    <!-- attendees strings -->
+    <string name="att_label">Add Attendees</string>
+    <string name="att_label2">Use this to add attendees one at a time.  Use the "Add a List" button to add a list of attendees all at once.</string>
+    <string name="att_add_list_button">Add this List</string>
+    <string name="att_edit_list_button">Edit your Lists</string>
+    <string name="att_get_number_button">Get this Contact\'s Numbers</string>
+    <string name="att_add_button">Add this contact using this number</string>
+    <string name="att_set_button">Set</string>
+    <string name="att_list_label">Attendees:</string>
+    <string name="att_remove_label">Remove this person:</string>
+    <string name="att_rem_button">Remove this contact</string>
+    <string name="att_clear_button">Clear list</string>
+    
+    <!-- dates and times strings -->
+    <string name="dt_label">Dates and Times</string>
+    <string name="dt_start_label">When does the meeting start?</string>
+    <string name="dt_end_label">When does the meeting end?</string>
+    <string name="dt_last_label">How long does the meeting last?</string>
+    <string name="dt_last_label2">minutes</string>
+    <string name="dt_or">Or</string>
+    <string name="dt_set_button">Set meeting times</string>
+    <string name="dt_next">Next</string>
+    <string name="dt_rb_ends">Use end time</string>
+    <string name="dt_rb_lasts">Use meeting duration</string>
+    <string name="dt_set">Set Times</string>
+    
+    <!-- recurrence strings -->
+    <string name="rec_label">Recurence</string>
+    
+    <!-- review strings -->
+    <string name="rev_org">Organizer:</string>
+    <string name="rev_loc">Location:</string>
+    <string name="rev_start">Starts:</string>
+    <string name="rev_ends">Ends:</string>
+    <string name="rev_lasts">Lasts:</string>
+    <string name="rev_rec">Recurs:</string>
+    <string name="rev_attL">Attendee List:</string>
+    <string name="rev_label">Review the Meeting</string>
+    <string name="notSet">Has not been Set</string>
+    <string name="button_org">Edit Organizer or Location</string>
+    <string name="button_attend">Edit Attendees</string>
+    <string name="button_date_time">Edit Dates and Times</string>
+    <string name="button_recur">Edit Recurrence</string>
+    <string name="button_Send">Send Meeting</string>
+    
+    <!-- Edit Lists strings -->
+    <string name="el_label">Edit Attendee Lists</string>
+    <string name="el_back_button">Back to Start screen</string>
+    <string name="el_list_label">Select a list to edit.</string>
+    <string name="el_use_button">Use this list</string>
+    <string name="el_curr_list_label">Current List</string>
+    <string name="el_get_nums_button">Get numbers</string>
+    <string name="el_add_contact_button">Add this contact</string>
+    <string name="el_paste_label">Or paste a list of names in the box below.</string>
+    <string name="el_paste_button">Scan Text</string>
+    <string name="el_format_label">Each contact should be on one line, with the name followed by a colon and then the number.  The only spaces should be the ones in the name itself.  If there are international numbers, make sure to include the country code in the number.</string>
+    <string name="el_remove">Remove this contact</string>
+    <string name="el_clear">Clear the list</string>
+    <string name="el_list_name_label">Name of this list:</string>
+    <string name="el_save">Save the list</string>
+    <string name="el_loc_label">Lists are plain text files (*.txt) located in the location below.  You can add lists to this location without using this app.</string>
+    
+    <!-- Send strings -->
+    <string name="send_label">Sending</string>
+    <string name="send_back">Return to the start screen</string>    
+    
+    <!-- msg reader strings -->
+    <string name="reader_label">Incoming Meeting</string>
+    
+</resources>
