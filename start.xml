@@ -5,7 +5,7 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -14,7 +14,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
-        android:id="@+id/start_new"
+        android:id="@+id/rev_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_vertical_margin"
@@ -35,7 +35,7 @@
         android:text="@string/start_edit_button" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/dis_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/start_edit_label"
