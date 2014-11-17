@@ -14,6 +14,4 @@
 	<item android:id="@+id/rec" android:title="@string/men_rec"></item>
 	<item android:id="@+id/rev" android:title="@string/men_rev"></item>
 	<item android:id="@+id/attL" android:title="@string/men_attL"></item>  
-	<item android:id="@+id/send" android:title="@string/men_send"></item>  
-
 </menu>
