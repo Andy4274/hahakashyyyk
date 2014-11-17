@@ -19,6 +19,7 @@ import android.widget.ScrollView;
 
 public class OrgAndLocActivity extends Activity {
 
+	EditText title;
 	EditText name;
 	EditText number;
 	EditText loc;
@@ -36,6 +37,7 @@ public class OrgAndLocActivity extends Activity {
         filler = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.organizer, null);
         frame.addView((View)filler);
         //find things
+        title = (EditText)findViewById(R.id.org_title);
         name = (EditText)findViewById(R.id.org_name);
         number = (EditText)findViewById(R.id.org_number);
         loc = (EditText)findViewById(R.id.org_loc);
@@ -67,6 +69,7 @@ public class OrgAndLocActivity extends Activity {
     }
 	
 	 protected void setOrgAndLoc() {
+		MainActivity.meeting.setTitle(title.getText().toString());
 		MainActivity.meeting.setOrg(name.getText().toString()+":"+number.getText().toString());
 		MainActivity.meeting.setLoc(loc.getText().toString());
 	}
@@ -75,6 +78,7 @@ public class OrgAndLocActivity extends Activity {
 		final String orgname;
 		final String orgnum;
 		String orgloc;
+		String meeting_title;
 		
 		SharedPreferences prefs = getSharedPreferences("textmeeting", 0);
 		name.setText(prefs.getString("name", ""));
@@ -82,6 +86,12 @@ public class OrgAndLocActivity extends Activity {
 		loc.setText(prefs.getString("loc",""));
 		String org = MainActivity.meeting.getOrg();
 		orgloc = MainActivity.meeting.getLoc();
+		meeting_title = MainActivity.meeting.getTitle();
+		if (meeting_title!=null){
+			if (meeting_title.length()>0){
+				title.setText(meeting_title);
+			}
+		}
 		if ((org!=null) || (MainActivity.meeting.getLasts()!=null)){
 			int sep = org.indexOf(":");
 			orgname = org.substring(0, sep);

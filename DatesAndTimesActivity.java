@@ -56,7 +56,7 @@ public class DatesAndTimesActivity extends Activity {
 	        lasts = (NumberPicker)findViewById(R.id.dt_lasts);
 	        endsRb = (RadioButton)findViewById(R.id.dt_rb_end);
 	        lastsRb = (RadioButton)findViewById(R.id.dt_rb_last);
-	        endsTv = (TextView)findViewById(R.id.textView3);
+	        endsTv = (TextView)findViewById(R.id.dis_title);
 	        lastsTv = (TextView)findViewById(R.id.textView5);
 	        lastsTv2 = (TextView)findViewById(R.id.el_paste_box);
 	        set = (Button)findViewById(R.id.dt_set_button);

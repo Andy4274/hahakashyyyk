@@ -5,7 +5,7 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -34,7 +34,7 @@
         android:text="@string/el_use_button" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/dis_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/el_curr_list_label"
@@ -69,7 +69,7 @@
         android:text="@string/el_add_contact_button" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/rev_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/el_paste_label"
@@ -119,7 +119,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/dis_rec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/el_list_name_label"
@@ -155,6 +155,7 @@
         android:id="@+id/el_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:text="@string/el_back_button" />
 

@@ -14,9 +14,11 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ReviewActivity extends Activity {
 
+	TextView title;
 	TextView org;
 	TextView loc;
 	TextView start;
@@ -29,6 +31,7 @@ public class ReviewActivity extends Activity {
 	Button editRecur;
 	Button editAttL;
 	Button send;
+	TextView text;
 	
 	  @Override
 	    protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,7 @@ public class ReviewActivity extends Activity {
 	        filler = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.review, null);
 	        frame.addView((View)filler);
 	        //find things
+	        title = (TextView)findViewById(R.id.rev_title);
 	        org = (TextView)findViewById(R.id.rev_org);
 	        loc = (TextView)findViewById(R.id.rev_loc);
 	        start = (TextView)findViewById(R.id.rev_starts);
@@ -51,9 +55,16 @@ public class ReviewActivity extends Activity {
 	        editRecur = (Button)findViewById(R.id.rev_rec_button);
 	        editAttL = (Button)findViewById(R.id.rev_attL_button);
 	        editOrg = (Button)findViewById(R.id.rev_org_button);
-	        send = (Button)findViewById(R.id.start_new);
+	        send = (Button)findViewById(R.id.rev_send);
+	        text = (TextView)findViewById(R.id.rev_text);
 	        //fill out fields
-	        String data = MainActivity.meeting.getOrg();
+	        String data = MainActivity.meeting.getTitle();
+	        if (data!=null){
+	        	title.setText(data);
+	        } else {
+	        	title.setText(R.string.notSet);
+	        }
+	        data = MainActivity.meeting.getOrg();
 	        if (data!=null){
 	        	org.setText(data);
 	        } else {
@@ -97,6 +108,7 @@ public class ReviewActivity extends Activity {
 	        } else {
 	        	attL.setText(R.string.notSet);
 	        }
+	        text.setText(MainActivity.meeting.toText());
 	        //set up buttons
 	        editOrg.setOnClickListener(new OnClickListener(){
 				@Override
@@ -129,8 +141,13 @@ public class ReviewActivity extends Activity {
 	        send.setOnClickListener(new OnClickListener(){
 				@Override
 				public void onClick(View v) {
-					Intent i = new Intent(getBaseContext(), com.jassoftware.textmeeting.SendActivity.class);
-					startActivity(i);
+					if(MainActivity.meeting.isReady()){		
+						Intent i = new Intent(getBaseContext(), com.jassoftware.textmeeting.SendActivity.class);
+						startActivity(i);
+					} else {
+						Toast t = Toast.makeText(getBaseContext(), "You need to fill in more fields of the meeting.", Toast.LENGTH_SHORT);
+						t.show();
+					}
 				}	        	
 	        });
 	    }
@@ -190,7 +207,11 @@ public class ReviewActivity extends Activity {
         		default:
         	}
         	d = d + Integer.toString(day) + ", ";
-        	d = d + hour + ":" + minute + " ";
+        	d = d + hour + ":";
+        	if (minute<10){
+        		d = d + "0";
+        	}
+        	d = d + minute + " ";
         	switch (ap){
         		case Calendar.AM:
         			d = d + "AM";

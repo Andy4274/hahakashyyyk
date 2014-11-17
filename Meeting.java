@@ -12,6 +12,7 @@ public class Meeting {
 		String lasts;
 		String recurs;
 		String location;
+		String title;
 		
 		public Meeting(){
 			originator = null; 
@@ -21,11 +22,94 @@ public class Meeting {
 			lasts = null;
 			recurs = null;
 			location = null;
+			title = null;
 		}
 		
 		public Meeting(String s){  //to create a Meeting from a string created by the toText fn.
+			int starts, ends;
+			String org = "<org>";
+			String org_end = "</org>";
+			String loc = "<loc>";
+			String loc_end = "</loc>";
+			String title = "<title>";
+			String title_end = "</title>";
+			String start = "<start>";
+			String start_end = "</start>";
+			String end = "<end>";
+			String end_end = "</end>";
+			String last = "<len>";
+			String last_end = "</len>";
+			String rec = "<recur>";
+			String rec_end = "</recur>";
+			String att = "<attendees>";
+			String att_end = "</attendees>";
+			String data;
+			
 			if (s.startsWith("<textmeeting>")){
-				
+				starts = s.indexOf(org) + org.length();
+	        	ends = s.indexOf(org_end);
+	        	if (starts<ends){
+	        		data = s.substring(starts, ends);
+	        		originator = data;
+	        	} else {
+	        		originator = null;
+	        	}
+	        	starts = s.indexOf(title) + title.length();
+	        	ends = s.indexOf(title_end);
+	        	if (starts<ends){
+	        		data = s.substring(starts, ends);
+	        		title = data;
+	        	} else {
+	    			title = null;
+	    		}
+	        	starts = s.indexOf(loc) + loc.length();
+	        	ends = s.indexOf(loc_end);
+	        	if (starts<ends){
+	        		data = s.substring(starts, ends);
+	        		location = data;
+	        	} else {
+	        		location = null;
+	        	}
+	        	starts = s.indexOf(start) + start.length();
+	        	ends = s.indexOf(start_end);
+	        	if (starts<ends){
+	        		data = s.substring(starts, ends);
+	        	   	startTime = data;
+	        	} else {
+	        		startTime = null;
+	        	}
+	        	starts = s.indexOf(end) + end.length();
+	        	ends = s.indexOf(end_end);
+	        	if (starts<ends){
+	        		data = s.substring(starts, ends);
+	        		endTime = data;
+	        	} else {
+	        		endTime = null;
+	        	}
+	        	starts = s.indexOf(last) + last.length();
+	        	ends = s.indexOf(last_end);
+	        	if (starts<ends){
+	        		data = s.substring(starts, ends);
+	        		lasts = data;
+	        	} else {
+	        		lasts = null;
+	        	}
+	        	starts = s.indexOf(rec) + rec.length();
+	        	ends = s.indexOf(rec_end);
+	        	if (starts<ends){
+	        		data = s.substring(starts, ends);
+	        		recurs = data;
+	        	} else {
+	        		recurs = null;
+	        	}
+	        	starts = s.indexOf(att) + att.length();
+	        	ends = s.indexOf(att_end);
+	        	if (starts<ends){
+	        		data = s.substring(starts, ends);
+	        		attendeeList = data;
+	        	} else {
+	        		attendeeList = null;
+	        	}
 			} else {
 				originator = null; 
 				attendeeList = null;
@@ -34,23 +118,71 @@ public class Meeting {
 				lasts = null;
 				recurs = null;
 				location = null;
+				title = null;
 			}
 		}
 		
+		public void setTitle(String data) {
+			title = data;			
+		}
+		public String getTitle(){
+			return title;
+		}
+
 		public String toText(){
-			String msg = "";
-			msg = "<textmeeting><org>" + originator + "</org>";
-			msg = msg + "<start>" +	startTime + "</start>";
+			String msg = "<textmeeting>";
+			msg = msg + "\n<title>" + title + "</title>";
+			msg = msg +	"\n<org>" + originator + "</org>";
+			msg = msg + "\n<start>" +	startTime + "</start>";
 			if (endTime != null){
-				msg = msg + "<end>" + endTime + "</end>";
+				msg = msg + "\n<end>" + endTime + "</end>";
+				msg = msg + "\n<len>null</len>";
 			} else {
-				msg = msg + "<len>" + lasts + "</len>";
+				msg = msg + "\n<end>null</end>";
+				msg = msg + "\n<len>" + lasts + "</len>";
 			}
-			msg = msg + "<loc>" + location + "</loc>";
-			msg = msg + "<attendees>" + attendeeList + "</attendees>";
-			msg = msg + "<recur>" + recurs + "</recur>";
-			msg = msg + "</textmeeting>";
+			msg = msg + "\n<loc>" + location + "</loc>";
+			if ((attendeeList==null)||(attendeeList.length()==0)){
+				msg = msg + "\n<attendees>null</attendees>";	//\n added to avoid unpredictably added \n's
+			} else {
+				msg = msg + "\n<attendees>" + attendeeList + "\n</attendees>";
+			}
+			if (recurs == null){
+				msg = msg + "\n<recur>null</recur>";
+			} else {
+				msg = msg + "\n<recur>" + recurs + "</recur>";
+			}
+			msg = msg + "\n</textmeeting>";
 			return msg;
+		}
+		
+		public boolean isEmpty(String s){
+			boolean empty = false;
+			if ((s==null)||(s.length()==0)){
+				empty=true;
+			}
+			return empty;
+		}
+		
+		public boolean isReady(){
+			boolean ready = true;
+			if (isEmpty(originator)){
+				ready = false;
+			}
+			if (isEmpty(startTime)){
+				ready = false;
+			}
+			if (isEmpty(endTime)&&isEmpty(lasts)){  //one or the other must be set, but never both
+				ready=false;
+			}
+			if (isEmpty(location)){
+				ready=false;
+			}
+			if (isEmpty(attendeeList)){
+				ready=false;
+			}
+			//recurs is optional
+			return ready;
 		}
 
 		public void setOrg(String o) {
@@ -87,6 +219,7 @@ public class Meeting {
 			if (attendeeList.length()==0){
 				return null;
 			}
+			
 			
 			
 			if((attendeeList!=null)||(!attendeeList.equalsIgnoreCase(""))){

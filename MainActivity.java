@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
         frame.addView((View)filler);
         meeting = new Meeting();
         //find stuff
-        newMeeting = (Button)findViewById(R.id.start_new);
+        newMeeting = (Button)findViewById(R.id.rev_send);
         editAttL = (Button)findViewById(R.id.start_edit);
         done = (Button)findViewById(R.id.start_done);
         //set up buttons
