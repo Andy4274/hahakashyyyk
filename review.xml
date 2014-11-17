@@ -5,7 +5,7 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -14,10 +14,24 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="@string/rev_title"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/rev_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/rev_org"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -25,10 +39,11 @@
         android:id="@+id/rev_org"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/dis_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/rev_loc"
@@ -38,6 +53,7 @@
         android:id="@+id/rev_loc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -51,6 +67,7 @@
         android:id="@+id/rev_starts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -64,6 +81,7 @@
         android:id="@+id/rev_ends"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -77,6 +95,7 @@
         android:id="@+id/rev_lasts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -90,6 +109,7 @@
         android:id="@+id/rev_rec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -103,6 +123,7 @@
         android:id="@+id/rev_attL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:textAppearance="?android:attr/textAppearanceMedium" />
     
     <Button
@@ -131,11 +152,17 @@
         android:text="@string/button_attend" />
 
     <Button
-        android:id="@+id/start_new"
+        android:id="@+id/rev_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:text="@string/button_Send" />
+
+    <TextView
+        android:id="@+id/rev_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
 </LinearLayout>
