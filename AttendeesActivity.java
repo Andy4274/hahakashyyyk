@@ -164,9 +164,23 @@ public class AttendeesActivity extends Activity {
 	        add_contact.setOnClickListener(new OnClickListener(){
 	        	@Override
 	        	public void onClick(View v){
-	        		SimpleContact newcontact = new SimpleContact(name.getText().toString(), nums.getSelectedItem().toString());
+	        		String n = name.getText().toString();
+	        		if ((n==null)||(n.length()==0)){  //if name is empty then skip all the rest.
+	        			Toast t = Toast.makeText(getBaseContext(), "Please type a name.", Toast.LENGTH_SHORT);
+						t.show();
+	        			return;
+	        		}
+	        		
+	        		if (nums_list.isEmpty()){  //if number is empty then skip all the rest.
+	        			Toast t = Toast.makeText(getBaseContext(), "Please select a number from the list. Tap \"Get this Contact's Numbers\" to populate the list.", Toast.LENGTH_SHORT);
+						t.show();
+	        			return;
+	        		}
+	        		SimpleContact newcontact = new SimpleContact(n, nums.getSelectedItem().toString());
 	        		if (!listContains(attendees, newcontact)){
 	        			attendees.add(newcontact);
+	        			invited_names.add(newcontact.getName());
+	        			ad_rem.notifyDataSetChanged();
 	        			attList.setText(attList.getText().toString() + "\n" + newcontact.toString());
 	        			name.setText("");
 	        			nums_list.clear();
@@ -342,3 +356,4 @@ public class AttendeesActivity extends Activity {
 	    }
 	    
 }
+
