@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TextMeeting</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="button_Set">Set</string>
+	<string name="button_Next">Next</string>
+	
+	<!-- menu strings -->
+	<string name="men_start">Start Screen</string>
+	<string name="men_org">Organizer and Location</string>
+	<string name="men_att">Attendees</string>
+	<string name="men_dt">Dates and Times</string>
+	<string name="men_rec">Recurence</string>
+	<string name="men_rev">Review Meeting</string>
+	<string name="men_attL">Edit Attendee Lists</string>
+	<string name="men_send">Send Activity</string>
+		
+	<!-- start strings -->
+	<string name="start_label">What do you want to do?</string>
+	<string name="start_new_button">Create a new meeting</string>
+	<string name="start_edit_button">Edit Attendee Lists</string>
+	<string name="start_new_label">This will start the process to call a new meeting.</string>
+	<string name="start_edit_label">This will let you create and edit lists so you can quickly add groups of attendees</string>
+	<string name="start_quit">Done</string>
+	
+    <!-- organizer strings -->
+    <string name="org_title">Title of meeting:</string>
+    <string name="org_label">Create a new meeting.\n</string>
+    <string name="org_label2">Who are you and what is your number</string>
+    <string name="org_label3">Where do you want to meet?\n</string>
+    <string name="name_label">Organizer\'s (Your) Name:</string>
+    <string name="number_label">Organizer\'s (Your) Number:</string>
+    <string name="loc_label">Location of the meeting:</string>
+    <string name="loc_hint">Room number, and maybe building, if necessary</string>
+    <string name="button_hint">Saving will keep your name, number, and the location for the next time you use this app.\nSetting saves the same data for this use.\nNext takes you to Dates and Times.</string>
+    <string name="save">Save</string>
+    <string name="org_title_hint">Meeting Title</string>
+    <string name="org_name_hint">Your name</string>
+    <string name="org_num_hint">Your number</string>
+    
+    <!-- attendees strings -->
+    <string name="att_label">Add Attendees</string>
+    <string name="att_label2">Use this to add attendees one at a time.  Use the "Add a List" button to add a list of attendees all at once.</string>
+    <string name="att_add_list_button">Add this List</string>
+    <string name="att_edit_list_button">Edit your Lists</string>
+    <string name="att_get_number_button">Get this Contact\'s Numbers</string>
+    <string name="att_add_button">Add this contact using this number</string>
+    <string name="att_set_button">Set</string>
+    <string name="att_list_label">Attendees:</string>
+    <string name="att_remove_label">Remove this person:</string>
+    <string name="att_rem_button">Remove this contact</string>
+    <string name="att_clear_button">Clear list</string>
+    
+    <!-- dates and times strings -->
+    <string name="dt_label">Dates and Times</string>
+    <string name="dt_start_label">When does the meeting start?</string>
+    <string name="dt_end_label">When does the meeting end?</string>
+    <string name="dt_last_label">How long does the meeting last?</string>
+    <string name="dt_last_label2">minutes</string>
+    <string name="dt_or">Or</string>
+    <string name="dt_set_button">Set meeting times</string>
+    <string name="dt_next">Next</string>
+    <string name="dt_rb_ends">Use end time</string>
+    <string name="dt_rb_lasts">Use meeting duration</string>
+    <string name="dt_set">Set Times</string>
+    
+    <!-- recurrence strings -->
+    <string name="rec_label">Recurence</string>
+    <string name="rec_explan">The main thing to remember is that this is entirely optional.\nThis section is for events that need to be repeated.  A full explanation of what is required and what each part does can be found at the spec for RFC5545, section 3.3.10\n\nhttp://tools.ietf.org/html/rfc5545</string>
+    <string name="rec_freq_label">Frequency:</string>
+    <string name="rec_until_label">Until:</string>
+    <string name="rec_until_colon">:</string>
+    <string name="rec_count_label">Count:</string>
+    <string name="rec_int_label">Interval:</string>
+    <string name="rec_by_sec_label">By Second:</string>
+    <string name="rec_by_sec_add">Add</string>
+    <string name="rec_by_sec_clear">Clear List</string>
+    <string name="rec_count_hint">How many repeats</string>
+    <string name="rec_int_hint">Interval on Frequency</string>
+    <string name="rec_by_x_label">Select:</string>
+    <string name="rec_by_x_button">Add</string>
+    <string name="rec_add_freq">Add Frequency Rule</string>
+    <string name="rec_add_uorc">Add Until or Count Rule</string>
+    <string name="rec_add_int">Add Interval Rule</string>
+    <string name="rec_add_wkst">Add Week Start Rule</string>
+    <string name="rec_wkst_label">Weeks start on which day:</string>
+    <string name="rec_set_button">Set</string>
+    <string name="rec_rule_label">Recursion Rule:</string>
+    <string name="rec_rule_remove">Remove which rule part:</string>
+    <string name="rec_remove">Remove</string>
+    
+    <!-- review strings -->
+    <string name="rev_title">Meeting Title:</string>
+    <string name="rev_org">Organizer:</string>
+    <string name="rev_loc">Location:</string>
+    <string name="rev_start">Starts:</string>
+    <string name="rev_ends">Ends:</string>
+    <string name="rev_lasts">Lasts:</string>
+    <string name="rev_rec">Recurs:</string>
+    <string name="rev_attL">Attendee List:</string>
+    <string name="rev_label">Review the Meeting</string>
+    <string name="notSet">Has not been Set</string>
+    <string name="button_org">Edit Title, Organizer, or Location</string>
+    <string name="button_attend">Edit Attendees</string>
+    <string name="button_date_time">Edit Dates and Times</string>
+    <string name="button_recur">Edit Recurrence</string>
+    <string name="button_Send">Send Meeting</string>
+    
+    <!-- Edit Lists strings -->
+    <string name="el_label">Edit Attendee Lists</string>
+    <string name="el_back_button">Back to Start screen</string>
+    <string name="el_list_label">Select a list to edit.</string>
+    <string name="el_use_button">Use this list</string>
+    <string name="el_curr_list_label">Current List</string>
+    <string name="el_get_nums_button">Get numbers</string>
+    <string name="el_add_contact_button">Add this contact</string>
+    <string name="el_paste_label">Or paste a list of names in the box below.</string>
+    <string name="el_paste_button">Scan Text</string>
+    <string name="el_format_label">Each contact should be on one line, with the name followed by a colon and then the number.  The only spaces should be the ones in the name itself.  If there are international numbers, make sure to include the country code in the number.</string>
+    <string name="el_remove">Remove this contact</string>
+    <string name="el_clear">Clear the list</string>
+    <string name="el_list_name_label">Name of this list:</string>
+    <string name="el_save">Save the list</string>
+    <string name="el_loc_label">Lists are plain text files (*.txt) located in the location below.  You can add lists to this location without using this app.</string>
+    
+    <!-- Send strings -->
+    <string name="send_label">Sending</string>
+    <string name="send_status_label">Status:</string>
+    <string name="send_resend">Send</string>
+    <string name="send_back">Return to Start</string>    
+    
+    <!-- msg reader strings -->
+    <string name="reader_label">Incoming Meeting</string>
+    
+    <!-- Display strings -->
+    <string name="dis_label">Incoming Message</string>
+    <string name="dis_add">Add to Calendar</string>
+    <string name="dis_done">Done</string>
+    <string name="dis_org">Person calling the meeting:</string>
+	<string name="dis_loc">Location:</string>
+	<string name="dis_start">Starts:</string>
+	<string name="dis_end">Ends:</string>
+	<string name="dis_last">Lasts:</string>
+	<string name="dis_att">Attending:</string>
+	<string name="dis_rec">Recurs:</string>
+	<string name="dis_title">Title:</string>
+	
+	<!-- By Second -->
+	<string name="bysec_label">By Second</string>
+	<string name="bysec_exp">Select the second(s) for events to start.</string>
+	<string name="bysec_add">Add to List</string>
+	<string name="bysec_clear">Clear List</string>
+	
+	<!-- By Minute -->
+	<string name="bymin_label">By Minute</string>
+	<string name="bymin_exp">Select the minute(s) for events to start.</string>
+	<string name="bymin_add">Add to List</string>
+	<string name="bymin_clear">Clear List</string>
+	
+	<!-- By Hour -->
+	<string name="byhour_label">By Hour</string>
+	<string name="byhour_exp">Select the hour(s) for events to start.</string>
+	<string name="byhour_add">Add to List</string>
+	<string name="byhour_clear">Clear List</string>
+	
+	<!-- By Day -->
+	<string name="byday_label">By Day</string>
+	<string name="byday_exp">Select the weekday(s) for events to start.</string>
+	<string name="byday_add">Add to List</string>
+	<string name="byday_clear">Clear List</string>
+	<string name="byday_cb">Use week number</string>
+	
+	<!-- By Month Day -->
+	<string name="bymonday_label">By Month Day</string>
+	<string name="bymonday_exp">Select the month day(s) for events to start.</string>
+	<string name="bymonday_add">Add to List</string>
+	<string name="bymonday_clear">Clear List</string>
+	
+	<!-- By Year Day -->
+	<string name="byyearday_label">By Year Day</string>
+	<string name="byyearday_exp">Select the year day(s) for events to start.</string>
+	<string name="byyearday_add">Add to List</string>
+	<string name="byyearday_clear">Clear List</string>
+	
+	<!-- By Week No -->
+	<string name="byweekno_label">By Week Number</string>
+	<string name="byweekno_exp">Select the month day(s) for events to start.</string>
+	<string name="byweekno_add">Add to List</string>
+	<string name="byweekno_clear">Clear List</string>
+	
+	<!-- By Month -->
+	<string name="bymon_label">By Month</string>
+	<string name="bymon_exp">Select the month(s) for events to start.</string>
+	<string name="bymon_add">Add to List</string>
+	<string name="bymon_clear">Clear List</string>
+	
+	<!-- By Setpos -->
+	<string name="bysetpos_label">By Set position</string>
+	<string name="bysetpos_exp">Select the element(s) of the other interval for events to start.</string>
+	<string name="bysetpos_add">Add to List</string>
+	<string name="bysetpos_clear">Clear List</string>
+	
+</resources>
