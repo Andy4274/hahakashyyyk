@@ -69,6 +69,28 @@
     
     <!-- recurrence strings -->
     <string name="rec_label">Recurence</string>
+    <string name="rec_explan">The main thing to remember is that this is entirely optional.\nThis section is for events that need to be repeated.  A full explanation of what is required and what each part does can be found at the spec for RFC5545, section 3.3.10\n\nhttp://tools.ietf.org/html/rfc5545</string>
+    <string name="rec_freq_label">Frequency:</string>
+    <string name="rec_until_label">Until:</string>
+    <string name="rec_until_colon">:</string>
+    <string name="rec_count_label">Count:</string>
+    <string name="rec_int_label">Interval:</string>
+    <string name="rec_by_sec_label">By Second:</string>
+    <string name="rec_by_sec_add">Add</string>
+    <string name="rec_by_sec_clear">Clear List</string>
+    <string name="rec_count_hint">How many repeats</string>
+    <string name="rec_int_hint">Interval on Frequency</string>
+    <string name="rec_by_x_label">Select:</string>
+    <string name="rec_by_x_button">Add</string>
+    <string name="rec_add_freq">Add Frequency Rule</string>
+    <string name="rec_add_uorc">Add Until or Count Rule</string>
+    <string name="rec_add_int">Add Interval Rule</string>
+    <string name="rec_add_wkst">Add Week Start Rule</string>
+    <string name="rec_wkst_label">Weeks start on which day:</string>
+    <string name="rec_set_button">Set</string>
+    <string name="rec_rule_label">Recursion Rule:</string>
+    <string name="rec_rule_remove">Remove which rule part:</string>
+    <string name="rec_remove">Remove</string>
     
     <!-- review strings -->
     <string name="rev_title">Meeting Title:</string>
@@ -125,5 +147,60 @@
 	<string name="dis_att">Attending:</string>
 	<string name="dis_rec">Recurs:</string>
 	<string name="dis_title">Title:</string>
+	
+	<!-- By Second -->
+	<string name="bysec_label">By Second</string>
+	<string name="bysec_exp">Select the second(s) for events to start.</string>
+	<string name="bysec_add">Add to List</string>
+	<string name="bysec_clear">Clear List</string>
+	
+	<!-- By Minute -->
+	<string name="bymin_label">By Minute</string>
+	<string name="bymin_exp">Select the minute(s) for events to start.</string>
+	<string name="bymin_add">Add to List</string>
+	<string name="bymin_clear">Clear List</string>
+	
+	<!-- By Hour -->
+	<string name="byhour_label">By Hour</string>
+	<string name="byhour_exp">Select the hour(s) for events to start.</string>
+	<string name="byhour_add">Add to List</string>
+	<string name="byhour_clear">Clear List</string>
+	
+	<!-- By Day -->
+	<string name="byday_label">By Day</string>
+	<string name="byday_exp">Select the weekday(s) for events to start.</string>
+	<string name="byday_add">Add to List</string>
+	<string name="byday_clear">Clear List</string>
+	<string name="byday_cb">Use week number</string>
+	
+	<!-- By Month Day -->
+	<string name="bymonday_label">By Month Day</string>
+	<string name="bymonday_exp">Select the month day(s) for events to start.</string>
+	<string name="bymonday_add">Add to List</string>
+	<string name="bymonday_clear">Clear List</string>
+	
+	<!-- By Year Day -->
+	<string name="byyearday_label">By Year Day</string>
+	<string name="byyearday_exp">Select the year day(s) for events to start.</string>
+	<string name="byyearday_add">Add to List</string>
+	<string name="byyearday_clear">Clear List</string>
+	
+	<!-- By Week No -->
+	<string name="byweekno_label">By Week Number</string>
+	<string name="byweekno_exp">Select the month day(s) for events to start.</string>
+	<string name="byweekno_add">Add to List</string>
+	<string name="byweekno_clear">Clear List</string>
+	
+	<!-- By Month -->
+	<string name="bymon_label">By Month</string>
+	<string name="bymon_exp">Select the month(s) for events to start.</string>
+	<string name="bymon_add">Add to List</string>
+	<string name="bymon_clear">Clear List</string>
+	
+	<!-- By Setpos -->
+	<string name="bysetpos_label">By Set position</string>
+	<string name="bysetpos_exp">Select the element(s) of the other interval for events to start.</string>
+	<string name="bysetpos_add">Add to List</string>
+	<string name="bysetpos_clear">Clear List</string>
 	
 </resources>
